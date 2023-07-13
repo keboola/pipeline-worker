@@ -11,7 +11,7 @@ printf "Running deployment of %s\n" "$WORKER_NAME"
 
 az group create \
   --subscription "$SUBSCRIPTION" \
-  --location "East US" \
+  --location "$WORKER_LOCATION" \
   --name "$WORKER_NAME" \
   --tags "purpose=azure-pipeline" "workerName=$WORKER_NAME"
 

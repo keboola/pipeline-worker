@@ -11,7 +11,7 @@ stages:
         steps:
           - task: AzureCLI@2
             inputs:
-              azureSubscription: 'Keboola DEV PS Team CI(9577e289-304e-4165-abe0-91c933200878)'
+              azureSubscription: 'Keboola DEV PS Team CI'
               scriptType: 'bash'
               scriptLocation: 'scriptPath'
               scriptPath: 'run-startup.sh'
@@ -21,4 +21,5 @@ stages:
               ADMIN_USERNAME: $(ADMIN_USERNAME)
               ADMIN_PASSWORD: $(ADMIN_PASSWORD)
               POOL_NAME: $(POOL_NAME)
+              WORKER_LOCATION: $(WORKER_LOCATION)
               PAT_TOKEN: $(System.AccessToken)
